@@ -1,0 +1,775 @@
+<html><head>
+    <title>Factura B Nº B01001-00020158</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" href="https://www.saasargentina.com/favicon.ico" type="image/x-icon">
+    <link href="style1.css" rel="stylesheet"> 
+    <style type="text/css">
+        /* Nuevo estilo predeterminado para todas las ventas IMPRESAS de SaaS Argentina */
+
+@charset "utf-8";
+@page { size: A4 portrait }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+        }
+
+/* Body principal  */
+body {
+    background:none;
+    /* Lo centro para internet explorer */
+    text-align: center;
+    width:100%;
+    /* Sigo para los navegadores buenos */
+    margin-left:0px;
+    margin-bottom:0px;
+    margin-top:0px;
+    margin-right:0px;
+    padding: 0 0 0 0;
+    text-align:left;
+    margin:auto;
+    background:none;
+    width:21cm;
+    height:auto;
+}
+
+/* Arma el total */
+#com_contenedor {
+    position:relative;
+    top:0.5cm;
+    left:1.00cm;
+    width:18.20cm;
+    height:25.20cm;
+}
+
+/* NUEVOS ALERTAS SUPERIORES */
+#alerta_abierto, #alerta_anulado {position: absolute; top:2.4cm;left:10.5cm; color:red; font-size: 1.6em;
+    -ms-transform: rotate(-7deg); /* IE 9 */
+    -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+    transform: rotate(-7deg);
+    border: 1px solid red;
+    padding: 5px;
+}
+
+#com_original {position: absolute; top:0cm;left:11.2cm;}
+
+
+/* CUERPO DE LA VENTA */
+#com_cuerpo {
+}
+
+#com_encabezado {
+    visibility:visible;
+}
+
+/* ENCABEZADO DE LA VENTA + RECUADROS*/
+#com_encabezado, #com_cliente, #com_masinfo {
+    margin-left:10px;
+    margin-top:10px;
+    width:18.20cm;
+    background-color:#FFF;
+    overflow:hidden;
+}
+
+#com_encabezado {height:auto;}
+
+/* MARCA DE LA EMPRESA */
+#com_logo {
+    float:left;
+    margin-left:0px;
+    margin-top:0px;
+    width:360px;
+    text-align:center;
+    height:120px;
+    overflow:hidden;
+    display:table;
+}
+.com_img_logo {max-width:360px; height: 120px;}
+
+/* SI NO HAY LOGO SE MUESTRA TEXTO DEL NOMBRE EN GRANDE */
+.com_empresa_campo_nombre {font-size: 2.5em; font-weight: bold; display:table-cell; vertical-align:middle;}
+
+
+/* SECTOR LETRA TIPO DE VENTA */
+#com_venta_letra {
+    float:left;
+    margin-left:30px;
+    margin-top:30px;
+    font-size:44px;
+    font-weight:bold;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.com_venta_campo_codigo {display:table; font-size: .2em;}
+
+/* AGRUPO LOS DATOS DE LA VENTA */
+#com_datos_venta {
+    float:left;
+    margin-left:10px;
+    margin-top:20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:16px;
+    padding:5px;
+    padding-left:10px;
+    font-weight:900;
+    border-left:#CCC solid 2px;
+    width: 6cm;
+}
+
+/* SECTOR NOMBRE DE VENTA */
+#com_venta_nombre {width: 6cm; overflow: hidden;}
+
+/* SECTOR NUMERO CORRELATIVO */
+#com_venta_numero {
+}
+
+/* SECTOR FECHA ENTERO*/
+#com_venta_fecha {
+}
+
+#com_venta_hora {
+    visibility:hidden;
+    display:none;
+}
+
+/* SECTOR FECHA SEPARADO*/
+#com_venta_dia, #com_venta_mes, #com_venta_ano {
+    visibility:hidden;
+    display:none;
+}
+
+/* SECTOR IZQUIERDA DEL ENCABEZADO DE DATOS DE LA EMPRESA */
+#com_encabezado_interior_izquierda {
+    clear:left;
+    float:left;
+    margin-top:10px;
+    width:9.8cm;
+    text-align:center;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#333333;
+}
+
+
+/* SECTOR DERECHA DEL ENCABEZADO DE DATOS DE LA EMPRESA  */
+#com_encabezado_interior_derecha {
+    float:right;
+    width:7cm;
+    margin-right: 1cm;
+    margin-top: 0.6cm;
+    text-align:center;
+    color:#333333;
+}
+
+/* RECUADRO textos de los sectores */
+#com_empresa_nombre {
+    font-weight:bold;
+    font-size:11px;
+}
+
+#com_empresa_cuit, #com_empresa_ingresosbrutos, #com_empresa_inicio {display:block;}
+
+#com_empresa_razonsocial, #com_empresa_tipoiva, #com_empresa_domicilio, #com_empresa_localidad, #com_empresa_provincia, #com_empresa_telefonos, #com_empresa_mail, #com_empresa_url {
+    display:inline-block;
+    * float:left !important;
+}
+#com_encabezado_interior_izquierda > div:after {content:' / ';}
+#com_empresa_nombre:after {content:'' !important;}
+
+
+
+/**************************************************************/
+/* COMIENZA RECUADRO DE DATOS DEL CLIENTE Y DETALLES DE VENTA */
+/**************************************************************/
+
+/* SECTOR DE DATOS DEL CLIENTE */
+#com_cliente {
+    visibility:visible;
+    clear:both;
+    float:left;
+    margin-left:-10px;
+    width:100%;
+    text-align:left;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:#000;
+    background:#CCC;
+    height:auto;
+    overflow:visible;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    * padding-bottom:10px !important;
+}
+
+
+
+/* CAMPOS DE LOS DATOS DEL CLIENTE */
+#com_cliente_nombre,
+#com_cliente_domicilio,
+#com_cliente_tipoiva,
+#com_cliente_localidad,
+#com_cliente_provincia,
+#com_cliente_cuit,
+#com_cliente_telefonos,
+#com_cliente_id,
+#com_cliente_mail,
+#com_cliente_ML_nickname,
+#com_cliente_extrasxmodulos {
+   	display: table;
+	width: auto !important;
+    * float:left !important;
+    * width:auto !important;
+    padding-left:10px;
+    padding-top:2px;
+    font-weight:bold;
+    overflow:hidden;
+    height:13px;
+    * height:20px !important;
+    * overflow:visible;
+}
+
+#com_cliente_nombre { width: 11.8cm !important; }
+
+/* OCULTO LO QUE NO SE MUESTRA DE LOS CAMPOS DEL CLIENTE */
+#com_cliente_id,
+#com_cliente_telefonos,
+#com_cliente_mail,
+#com_cliente_ML_nickname,
+#com_cliente_extrasxmodulos {
+    visibility:hidden;
+    display:none;
+}
+
+/* Para mostrar X o la descripcion correspondiente */
+#com_cliente_Consumidor_final, #com_cliente_IVA_Responsable_Inscripto, #com_cliente_Responsable_Monotributo, #com_cliente_IVA_Exento, #com_cliente_Monotributista_Social, #com_cliente_Monotributo_Trabajador_Independiente_Promovido, #com_cliente_No_Responsable_IVA, #com_cliente_IVA_No_Alcanzado {
+    visibility:hidden;
+    display:none;
+}
+
+
+/* Titulos de los Campos */
+.com_cliente_campo_nombre,
+.com_cliente_campo_id,
+.com_cliente_campo_domicilio,
+.com_cliente_campo_tipoiva,
+.com_cliente_campo_localidad,
+.com_cliente_campo_provincia,
+.com_cliente_campo_telefonos,
+.com_cliente_campo_mail,
+.com_cliente_campo_ML_nickname,
+.com_cliente_campo_cuit,
+.com_cliente_campo_IVA_Responsable_Inscripto,
+#com_cliente_extrasxmodulos .com_cliente_campo_extrasxmodulos {
+    visibility:visible;
+    font-weight:normal;
+    overflow:hidden;
+}
+
+/* SECTOR DE MÁS DATOS, DE VENTA */
+#com_masinfo {
+    position:absolute;
+    background:none;
+    z-index:99;
+    top:5.2cm;
+    left:12cm;
+    width: 6cm;
+    max-height: 6cm;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:#000;
+    text-align:left;
+    border-left: 1px dotted #989898;
+}
+
+/* CAMPOS DE LOS DATOS DEL SECTOR MAS INFO */
+#com_masinfo_situacion,
+#com_masinfo_concepto,
+#com_masinfo_fechainicio,
+#com_masinfo_fechafin,
+#com_masinfo_ML_order_id,
+#com_masinfo_condicionventa,
+#com_masinfo_vencimiento1,
+#com_masinfo_vencimiento2,
+#com_masinfo_usuario,
+#com_masinfo_relaciones,
+#com_extrasxmodulos {
+    display: table;
+    width: auto !important;
+    * float:left !important;
+    * width:auto !important;
+    padding-left:10px;
+    padding-top:2px;
+    font-weight:bold;
+    overflow:hidden;
+    height:13px;
+    * height:20px !important;
+    * overflow:visible;
+}
+
+/* OCULTO LO QUE NO SE MUESTRA DEL SECTOR MAS INFO */
+#com_masinfo_situacion,
+#com_masinfo_ML_order_id,
+#com_masinfo_vencimiento2,
+#com_masinfo_relaciones
+{visibility: hidden;display: none;}
+
+
+/* Para mostrar X o la descripcion correspondiente */
+#com_masinfo_vencimiento2,
+#com_masinfo_condicionventa_,
+#com_masinfo_condicionventa_contado,
+#com_masinfo_condicionventa_cuentacorriente,
+#com_masinfo_condicionventa_debito,
+#com_masinfo_condicionventa_credito,
+#com_masinfo_condicionventa_cheque,
+#com_masinfo_condicionventa_ticket,
+#com_masinfo_condicionventa_otra {visibility:hidden; display:none;}
+
+
+/* TITULOS DE LOS CAMPOS del SECTOR MAS INFO */
+.com_masinfo_campo_condicionventa,
+.com_masinfo_campo_concepto,
+.com_masinfo_campo_fechainicio,
+.com_masinfo_campo_fechafin,
+.com_masinfo_campo_vencimiento1,
+.com_masinfo_campo_vencimiento2,
+.com_masinfo_campo_usuario,
+.com_masinfo_campo_relaciones,
+.com_campo_extrasxmodulos  {
+    font-weight:normal;
+}
+
+
+/***********************************/
+/* COMIENZA EL SECTOR DE PRODUCTOS */
+/***********************************/
+
+/* CONTENEDOR DE LA TABLA DE PRODUCTOS Y LOS TOTALES, CON ALTO FIJO */
+#com_contenedorlistadoytotales {
+    clear: both;
+    width:18.20cm;
+}
+
+/* SECTOR DE LISTADO DE PRODUCTOS */
+#com_productos {
+    float: left;
+    margin-top:10px;
+    margin-left:5px;
+    margin-bottom:20px;
+
+    /* ALTURA DEL SECTOR PARA LOS PRODUCTOS */
+    min-height: 13cm;
+    overflow: hidden;
+
+    border-bottom: 2px solid #000;
+}
+
+/* FILA CABECERA DE LISTADO DE PRODUCTOS */
+#com_productos_titulos {
+    border-bottom: 1px solid #000;
+    overflow:hidden;
+    margin-bottom: 5px;
+}
+
+/* CAMPOS DE LAS CABECERAS  CON PIXELES FIJOS */
+#com_productos_titulos_codigo { float:left; margin-left:0px; width:80px; }
+#com_productos_titulos_cantidad { float:left; width:50px; padding-bottom: 10px; }
+#com_productos_titulos_descripcion { float:left; width:280px; }
+#com_productos_titulos_precio, #com_productos_titulos_preciofinal,
+#com_productos_titulos_unitario { float:left; width:80px; text-align:right; }
+#com_productos_titulos_iva { float:left; width:55px; text-align:center;}
+#com_productos_titulos_descuento { float:left; width:50px; text-align:right;}
+#com_productos_titulos_total { float:right; width:80px; text-align:right; padding-right:8px; }
+
+/* Texto de las cabeceras */
+.com_productos_titulo {
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* LISTADO DE PRODUCTOS */
+#com_producto_1, #com_producto_2 {
+    clear:both;
+    float:left;
+    margin-left:0px;
+    width:18.20cm;
+    overflow:hidden;
+    padding-top:3px;
+    padding-bottom: 3px;
+    height:auto;
+}
+
+/* CAMPOS DE LOS PRODUCTOS */
+#com_producto_codigo { float:left; margin-left: 0px; width:80px; }
+#com_producto_cantidad { float:left; width:50px; margin-left:0px; }
+#com_producto_descripcion { float:left; width:280px; }
+#com_producto_precio, #com_producto_preciofinal { float:left; width:80px; text-align:right;}
+#com_producto_iva { float:left; width:55px; text-align:right;}
+#com_producto_descuento { float:left; width:50px; text-align:right; /* visibility:hidden; display:none; */}
+#com_producto_total { float:right; width:80px; text-align:right; margin-right:8px;}
+#com_producto_observacion { float:left; width:85%; text-align:left; margin-left:15px; border-top: 1px solid #CCC;border-bottom: 1px solid #CCC;}
+#com_producto_observacion:before{content:'Descripción: ';}
+#com_producto_trazabilidades { float:left; width:90%; text-align:left; margin-left:20px; }
+/* Texto de los campos de los productos */
+.com_producto {}
+
+/* CAMPOS DE LA TABLA DE TRIBUTOS */
+#com_tributos {
+    margin-top: 50px;
+    border-top: 1px dotted #CCC;
+    text-align: right;
+    float: right;
+}
+
+/*******************************************************************/
+/* COMIENZA FINAL DE DATOS DE LA VENTA, SUBTOTALES Y OBSERVACIONES */
+/*******************************************************************/
+
+/* OBSERVACIONES DE LA VENTA */
+#com_observaciones {
+    clear:both;
+    float:left;
+    margin-top: -0.4cm;
+    margin-left:10px;
+    width:12cm;
+    min-height:4cm;
+    overflow: hidden;
+}
+
+#com_observacion {min-height: 0.75cm; border-bottom: 1px solid #CCC;}
+
+.com_masinfo_campo_observacion {}
+
+.com_masinfo_cae_error {
+    font-size: 14px;
+    letter-spacing: -1px;
+    font-style: italic;
+    font-weight: bold;
+    padding: 5px;
+    padding-right: 8px;
+    border: #000 solid 1px;
+}
+
+#com_cae .com_masinfo_logo_afip {/* float:left; */ width: 120px; padding-right: 10px; /* visibility: hidden; display: none; */}
+#com_cae .com_masinfo_qr_afip {float:left; width: 120px; padding-right: 10px;}
+#com_cae .com_masinfo_campo_obscae, .com_masinfo_leyenda_afip {font-size: 10px;}
+
+/* TOTALES Y DESCUENTOS */
+#com_totales {
+    /* clear:both; */
+    float:right;
+    margin-top: -0.4cm;
+    width: 5.5cm;
+    padding-right:5px;
+    text-align:right;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    color:#000;
+    background:none;
+    overflow:visible;
+    border-left: 1px solid #CCC;
+    padding-left: 5px;
+}
+
+/* CAMPOS DE LOS TOTALES DE LA VENTA */
+#com_totales_subtotal {border-bottom:1px solid #CCC; padding:3px; font-weight: bold; font-size: 13px;}
+#com_totales_descuentopesos,
+#com_totales_descuento,
+#com_totales_nogravado,
+#com_totales_exento,
+#com_totales_neto,
+#com_totales_iva,
+/*#com_totales_iva2,*/
+#com_totales_tributos
+    {
+        padding:3px;
+    }
+
+/* Titulos de los campos totales de la venta */
+.com_totales_campo_subtotal,
+.com_totales_campo_descuento,
+.com_totales_campo_descuentopesos,
+.com_totales_campo_neto,
+.com_totales_campo_nogravado,
+.com_totales_campo_exento,
+.com_totales_campo_iva,
+/*.com_totales_campo_iva2,
+.com_totales_campo_iva3,*/
+.com_totales_campo_total,
+.com_totales_campo_tributos
+    {
+        float: left;
+    }
+
+/* RECUADRO DEL TOTAL */
+#com_totales_total {
+    margin-top:5px;
+    font-size:18px;
+    font-weight:bold;
+    padding:6px;
+    margin-right: -5px;
+    background-color: #CCC;
+    border-radius: 5px;
+    text-align:right;
+}
+
+/* FIN */
+#com_fin {
+    clear:both;
+    float:left;
+    width:100%;
+    border-top:#CCC dotted 1px;
+    padding-top:5px;
+    text-align:center;
+    margin-top:20px;
+    color:#CCC;
+}
+
+
+
+
+
+/* TAGS INCLUIDOS EN LAS OBSERVACIONES */
+
+table {
+    border-collapse: collapse;
+    font-size: 1em;
+}
+
+table td {
+    /*border: 1px solid #ddd; TODO Sacar este comentario cuando esté terminado el módulo de exportación */
+    padding: 5px;
+}
+
+table thead td {
+    border-bottom: 2px solid #000 !important;
+    font-weight: bold;
+}
+
+code, pre {
+    font-family: monospace sans-serif;
+}
+
+code {
+    background-color: #d8d7d7;
+}
+
+pre {
+    padding: 1em;
+    border: 1px dashed #ccc;
+    background: #f5f5f5;
+    overflow: auto;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+h1, h2, h3, h4,h5 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+
+        #selector_copia {
+            position: fixed;
+            z-index:10;
+            left:0px;
+            top:0px;
+            text-align: left;
+            padding: 10px;
+            background-color: #E1E1E1;
+            opacity: .8;
+            border-radius: 0px 0px 10px 0px;
+        }
+
+        #selector_copia a {color:#3B5998; text-decoration: none;}
+
+        #selector_copia .seleccionado {font-weight: bold;}
+
+        @media print {
+           #selector_copia {visibility: hidden; display: none;}
+        }
+    </style>
+
+</head>
+
+<body id="prn_ventas" onload="window.print();">
+<div id="selector_copia">
+    <a class="selector_copia seleccionado" href="#">ORIGINAL</a> | <a class="selector_copia" href="#">DUPLICADO</a> | <a class="selector_copia" href="#">TRIPLICADO</a>
+</div>
+<div id="com_contenedor">
+    <div id="com_cuerpo">
+    <div id="com_original">ORIGINAL</div>
+
+    <div id="com_encabezado">
+        <div id="com_logo"><img class="com_img_logo" src="https://s3-sa-east-1.amazonaws.com/saasargentina/Jhq7BqfRxiTVbqKR2bVR/estilo_logo.png"></div>
+        <div id="com_venta_letra">
+            <span class="com_venta_campo_letra">B</span><br>
+            <span class="com_venta_campo_codigo">COD. 006</span>
+        </div>
+
+        <div id="com_datos_venta">
+           <div id="com_venta_nombre">Factura B</div>
+            <div id="com_venta_numero">Nº B01001-00020158</div>
+            <div id="com_venta_fecha">29-11-2023</div>
+            <div id="com_venta_hora">12:08</div>
+            <div id="com_venta_dia">29</div>
+            <div id="com_venta_mes">11</div>
+            <div id="com_venta_ano">2023</div>
+        </div> <!-- Cierro el <div id="com_datos_venta"> -->
+
+        <div id="com_encabezado_interior_izquierda">
+            <div id="com_empresa_nombre">Construcción en Seco Canning S.R.L.</div>
+            <div id="com_empresa_razonsocial">CONSTRUCCION EN SECO CANNING S.R.L.</div>
+            <div id="com_empresa_tipoiva">IVA Responsable Inscripto</div>
+                <div id="com_empresa_domicilio">
+                    domicilio
+                </div>
+                <div id="com_empresa_localidad">
+                    CANNING
+                </div>
+                <div id="com_empresa_provincia">
+                    Buenos Aires
+                </div>
+                <div id="com_empresa_telefonos">
+                    WhatsApp   Linea 
+                </div>
+                <div id="com_empresa_mail">
+                    info@construccionenseco.com.ar
+                </div>
+                <div id="com_empresa_url">
+                    www.construccioenseco.com.ar
+                </div>
+        </div> <!-- Cierro el <div id="com_encabezado_interior_izquierda">-->
+
+        <div id="com_encabezado_interior_derecha">
+            <div id="com_empresa_cuit"><span class="com_empresa_campo_cuit">Cuit: </span></div>
+            <div id="com_empresa_ingresosbrutos"><span class="com_empresa_campo_ingresosbrutos">Ingresos Brutos: </span></div>
+            <div id="com_empresa_inicio"><span class="com_empresa_campo_inicio">Inicio Actividades: </span>13-04-2018</div>
+        </div> <!-- Cierro el <div id="com_encabezado_interior_derecha">-->
+    </div> <!--Cierro el <div id="com_encabezado">-->
+
+    <div id="com_cliente">
+        <div id="com_cliente_nombre"><span class="com_cliente_campo_nombre">Nombre: </span></div>
+        <div id="com_cliente_id"><span class="com_cliente_campo_id">N° de cliente: </span></div>
+        <div id="com_cliente_domicilio"><span class="com_cliente_campo_domicilio">Domicilio: </span></div>
+        <div id="com_cliente_tipoiva"><span class="com_cliente_campo_tipoiva">Cond. de IVA: </span></div>
+        <div id="com_cliente_Consumidor_final">X</div>
+        <div id="com_cliente_localidad"><span class="com_cliente_campo_localidad">Localidad: </span></div>
+        <div id="com_cliente_provincia"><span class="com_cliente_campo_provincia">Provincia: </span>Buenos Aires</div>
+        <div id="com_cliente_telefonos"><span class="com_cliente_campo_telefonos">Telefono/s: </span></div>
+        <div id="com_cliente_mail"><span class="com_cliente_campo_mail">Mail: </span></div>
+        <div id="com_cliente_ML_nickname"><span class="com_cliente_campo_ML_nickname">Apodo MercadoLibre: </span></div>
+        <div id="com_cliente_cuit"><span class="com_cliente_campo_cuit">DNI: </span></div>
+        <div id="com_cliente_extrasxmodulos">
+        </div>
+    </div> <!--Cierro el <div id="com_cliente">-->
+
+    <div id="com_masinfo">
+        <div id="com_masinfo_condicionventa"><span class="com_masinfo_campo_condicionventa">Condición de venta: </span>Contado</div>
+        <div id="com_masinfo_condicionventa_contado">X</div>
+        <div id="com_masinfo_usuario"><span class="com_masinfo_campo_usuario">Usuario: </span></div>
+        <div id="com_masinfo_situacion" style="display:none;"><span class="com_masinfo_campo_situacion">Situación: </span></div>
+        <div id="com_masinfo_vencimiento1" style="display:none;"><span class="com_masinfo_campo_vencimiento1">1º vencimiento: </span></div>
+        <div id="com_masinfo_concepto" style="display:none;"><span class="com_masinfo_campo_concepto">Conceptos incluidos: </span>Productos</div>
+        <div id="com_masinfo_fechainicio" style="display:none;"><span class="com_masinfo_campo_fechainicio">Período desde: </span></div>
+        <div id="com_masinfo_fechafin" style="display:none;"><span class="com_masinfo_campo_fechafin">Período hasta: </span></div>
+        <div id="com_masinfo_vencimiento2" style="display:none;"><span class="com_masinfo_campo_vencimiento2">2º vencimiento: </span></div>
+        <div id="com_masinfo_ML_order_id" style="display:none;"><span class="com_masinfo_campo_ML_order_id">Nº de venta en MercadoLibre: </span>0</div>
+        <div id="com_masinfo_relaciones"><span class="com_masinfo_campo_relaciones">Relaciones: </span>X00001-00039165&nbsp;,&nbsp;R00001-00040721&nbsp;</div>
+    </div> <!--Cierro el <div id="com_masinfo">-->
+
+    <div id="com_contenedorlistadoytotales">
+    <div id="com_productos">
+        <div id="com_productos_titulos">
+            <div id="com_productos_titulos_codigo"><span class="com_productos_titulo">Código</span></div>
+            <div id="com_productos_titulos_cantidad"><span class="com_productos_titulo">Cant.</span></div>
+            <div id="com_productos_titulos_descripcion"><span class="com_productos_titulo">Producto</span></div>
+            <div id="com_productos_titulos_preciofinal"><span class="com_productos_titulo">Precio</span></div>
+            <div id="com_productos_titulos_descuento"><span class="com_productos_titulo">Bonif.</span></div>
+            <div id="com_productos_titulos_total"><span class="com_productos_titulo">Importe</span></div>
+        </div>
+        <div id="com_producto_1">
+            <div id="com_producto_codigo"><span class="com_producto">60015&nbsp;</span></div>
+            <div id="com_producto_cantidad"><span class="com_producto">2&nbsp;</span></div>
+            <div id="com_producto_descripcion"><span class="com_producto">LANA DE VIDRIO C/ALUMIN 50mm 1.20X18 &nbsp;</span></div>
+            <div id="com_producto_preciofinal"><span class="com_producto">$ 62011.00&nbsp;</span></div>
+            <div id="com_producto_descuento"><span class="com_producto">0.00 %&nbsp;</span></div>
+            <div id="com_producto_total"><span class="com_producto">$ 124022.00&nbsp;</span></div>
+        </div>
+        <div id="com_producto_2">
+            <div id="com_producto_codigo"><span class="com_producto">40012&nbsp;</span></div>
+            <div id="com_producto_cantidad"><span class="com_producto">100&nbsp;</span></div>
+            <div id="com_producto_descripcion"><span class="com_producto">TORNILLO HEXAG. 14x2 1/2 METAL C/VUELO&nbsp;</span></div>
+            <div id="com_producto_preciofinal"><span class="com_producto">$ 122.17&nbsp;</span></div>
+            <div id="com_producto_descuento"><span class="com_producto">0.00 %&nbsp;</span></div>
+            <div id="com_producto_total"><span class="com_producto">$ 12217.00&nbsp;</span></div>
+        </div>
+    </div> <!--Cierro el <div id="com_productos">-->
+
+    <div id="com_observaciones">
+        <div id="com_observacion"><span class="com_masinfo_campo_observacion">Observaciones: </span><p>*LA ENTREGA DE MATERIALES&nbsp; (CON CARGO ) NO INCLUYE DESCARGA (SOLO SERVICIO DE TRASLADO).</p></div><br>
+            <div id="com_cae">
+                <img class="com_masinfo_qr_afip" src="data:image/png;base64,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">
+                <img class="com_masinfo_logo_afip" src="data:image/jpg;base64,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"><br>
+                <span class="com_masinfo_campo_cae">C.A.E. Nº: 73486674799682<br>Vencimiento C.A.E.:09-12-2023</span><br></div>
+    </div> <!--Cierro el <div id="com_observaciones">-->
+        <div id="com_totales">
+            <div id="com_totales_subtotal"><span class="com_totales_campo_subtotal">Subtotal: </span>$ 136239.00</div>
+            <div id="com_totales_descuento" style="display:none;"><span class="com_totales_campo_descuento">Descuento (0.00 %): </span>$ 0.00</div>
+            <div id="com_totales_tributos" style="display:none;"><span class="com_totales_campo_tributos">Impuestos: </span>$ 0.00</div>
+            <div id="com_totales_total"><span class="com_totales_campo_total">TOTAL: </span>$ 136239.00</div>
+        </div> <!--Cierro el <div id="com_totales">-->
+    </div> <!--Cierro el <div id="com_contenedorlistadoytotales">-->
+    <div id="com_fin">
+        <div id="com_fin_sistema"></div>
+    </div> <!--Cierro el <div id="com_fin">-->
+
+    </div> <!--Cierro el <div id="com_cuerpo">-->
+</div> <!--Cierro el <div id="com_contenedor">-->
+
+<script src="https://app.saasargentina.com/estilos/estilo_1/js/modulos/exportar.js"></script>
+
+
+
+</body></html>
